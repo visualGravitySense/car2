@@ -2,7 +2,7 @@
   <div class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0">
     <div class="container mx-auto p-6">
       <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">
-        Фотогалерея
+        <!-- Фотогалерея -->
       </h2>
       <div class="gallery grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         <div
@@ -71,7 +71,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .container {
   max-width: 1200px;
 }
@@ -97,3 +97,15 @@ export default {
 .gallery-item img {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+@media (min-width: 1024px) {
+  .gallery {
+    gap: 1.5rem; /* Larger gap on extra-large screens */
+  }
+
+  .gallery-item {
+    height: 250px; /* Height for large screens */
+  }
+}
+
+</style>
