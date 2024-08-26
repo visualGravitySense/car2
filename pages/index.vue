@@ -1,15 +1,11 @@
 <template>
   <div class="home-page">
-
     <Hero/>
-
     <About/>
-
     <Gift/>
 
     <!-- Преимущества обучения -->
     <Benefits/>
-
      <!-- <Gallery/> -->
     <br>
 
