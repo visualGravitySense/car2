@@ -52,8 +52,9 @@
       <h3 class="text-xl">Наши инструкторы:</h3>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
-      <instructorsList :instructors="instructors"/>
+        <instructors-list :instructors="instructors"/>
       </div>
+
 
       <br><br>
       <h3 class="text-xl">Процедура сдачи экзаменов</h3>
@@ -85,9 +86,7 @@
         </div>
       </div>
 
-      <!--<div v-for="review in reviews" :key="review.id">
-        <p>{{ review }}</p>
-      </div>-->
+      
     </section>
 
     <!-- Секция "Сертификаты и лицензии"
@@ -354,7 +353,7 @@ export default {
 .about-page {
   /* background-color: #faf3e0;  Легкий кремовый фон */
   font-family: 'Roboto Slab', serif;
-  padding: 2rem;
+  /* padding: 2rem; */
   border-radius: 10px;
   max-width: 1200px;
   margin: 0 auto;
@@ -535,6 +534,26 @@ p, li {
   background-image: url('@/assets/img/retro-2.jpg'); /* Укажите путь к вашему изображению */
   background-size: cover;
   background-position: center;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 4rem 1rem; /* Уменьшен внутренний отступ для мобильных устройств */
+    text-align: center;
+  }
+  .header h1 {
+    font-size: 2em; /* Уменьшен размер заголовка */
+  }
+  .hero-title {
+    font-size: 1.5rem; /* Уменьшен размер заголовка на главной */
+  }
+  .success-story-item, .review-item {
+    flex-direction: column; /* Устанавливаем элементы в колонку для мобильных устройств */
+  }
+  .review-image {
+    width: 50px; /* Уменьшен размер изображений для отзывов */
+    height: 50px;
+  }
 }
 
 

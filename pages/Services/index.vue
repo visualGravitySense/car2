@@ -826,22 +826,41 @@ form button:hover {
   background: #3b82f6; /* Светло-синий фон для расписания */
 }
 
+/* Медиа-запросы для больших экранов */
 @media (min-width: 600px) {
   .banner {
-    padding: 1.5rem; /* Немного увеличенный отступ для больших экранов */
+    padding: 1.5rem;
   }
   
   .banner h2 {
-    font-size: 2rem; /* Увеличенный размер шрифта для больших экранов */
+    font-size: 2rem;
   }
 
   .schedule h3 {
-    font-size: 1.75rem; /* Увеличенный размер шрифта для больших экранов */
+    font-size: 1.75rem;
   }
 
   .advantages-list li, .schedule-list li {
-    font-size: 1.1rem; /* Немного увеличенный размер шрифта для больших экранов */
+    font-size: 1.1rem;
   }
+
+  .about-section {
+    flex-direction: row; /* Горизонтальный порядок на больших экранах */
+  }
+
+  .about-image, .about-content {
+    width: 50%; /* Половина ширины для больших экранов */
+  }
+
+  .hero-section {
+    flex-direction: row; /* Горизонтальный порядок на больших экранах */
+  }
+
+  .hero-text, .hero-image {
+    width: 50%; /* Половина ширины для больших экранов */
+  }
+
+  
 }
 
 .btnInfo {
@@ -852,6 +871,12 @@ form button:hover {
   border-radius: 0.25rem;
 
   transition: background-color 0.3s;
+}
+
+@media (max-width: 600px) {
+  .hero-image {
+    display: none; /* Скрыть изображение на экранах меньше 600px */
+  }
 }
 
 
