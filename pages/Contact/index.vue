@@ -350,7 +350,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px;
+  /* padding: 40px; */
   background-color: #f8f9fa; /* Светлый фон для контраста */
   gap: 20px; /* Расстояние между текстом и изображением */
 }
@@ -744,5 +744,105 @@ p, li {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+@media (max-width: 768px) {
+
+  .contact-banner {
+    padding: 10px;
+  }
+
+  .section {
+    padding: 0px;
+  }
+
+  .about-page {
+    padding: 0rem;
+    max-width: 100%;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .about-image,
+  .about-content {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .welcome-text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .header {
+    padding: 4rem 1rem;
+  }
+
+  .containerContact {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .contact-details,
+  .contact-banner {
+    max-width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  .partner-logo {
+    width: 100px;
+    height: auto;
+  }
+
+  .logos-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .contact-banner h2 {
+    font-size: 1.5em;
+  }
+
+  .contact-banner p {
+    font-size: 1em;
+  }
+
+  .contact-item {
+    font-size: 0.9em;
+  }
+
+  .map-container iframe {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .contactBg {
+    padding: 3rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .containerContact {
+    padding: 10px;
+  }
+}
+
+/* Rest of the styles... */
 
 </style>

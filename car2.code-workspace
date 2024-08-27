@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "car2",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "frontend12"
+	}
+}

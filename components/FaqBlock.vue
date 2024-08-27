@@ -85,5 +85,37 @@
     border: none;
     cursor: pointer;
   }
+
+  /* Оптимизация для мобильных устройств */
+@media (max-width: 480px) {
+  .projects {
+    grid-template-columns: repeat(1, 1fr); /* Один столбец на мобильных устройствах */
+  }
+
+  .project {
+    padding: 10px; /* Уменьшаем отступы внутри блока */
+    margin-bottom: 10px; /* Уменьшаем отступ между блоками */
+    box-shadow: 3px 3px 0 #000; /* Уменьшаем тень для более аккуратного вида */
+  }
+
+  .project-header {
+    padding: 5px; /* Уменьшаем внутренние отступы заголовка */
+  }
+
+  .project-body h3 {
+    font-size: 16px; /* Уменьшаем размер шрифта заголовков */
+  }
+
+  .project-body p {
+    font-size: 14px; /* Уменьшаем размер шрифта текста */
+    margin: 0 0 5px; /* Уменьшаем нижний отступ текста */
+  }
+
+  .project-body button {
+    padding: 8px 15px; /* Уменьшаем отступы кнопки */
+    font-size: 14px; /* Уменьшаем размер шрифта кнопки */
+  }
+}
+
   </style>
   
