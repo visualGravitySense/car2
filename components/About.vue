@@ -74,11 +74,7 @@ export default {
 </script>
 
 
-<style>
-
-
-
-
+<style scoped>
 
 hstack {
   display: flex;
@@ -86,5 +82,55 @@ hstack {
   gap: 1rem;
 }
 
+/* Основная компоновка */
+.flex {
+  flex-direction: column; /* Колонки переключаются на вертикальное расположение на мобильных устройствах */
+}
 
+/* Медиазапросы для адаптации под мобильные */
+@media (min-width: 768px) {
+  .flex {
+    flex-direction: row; /* На планшетах и выше возвращаем двухколоночную структуру */
+  }
+}
+
+.about-title {
+  margin-top: 2rem;
+  font-size: 1.5rem; /* Уменьшаем заголовок для мобильных устройств */
+  line-height: 1.2;
+}
+
+.text-lg {
+  font-size: 1rem; /* Уменьшаем текст для мобильных */
+}
+
+.text-base {
+  font-size: 0.875rem; /* Текст параграфов меньше на мобильных */
+}
+
+/* Изображение в правом столбце */
+img {
+  
+  width: 100px;
+  height: 100px;
+  right: 1rem; /* Отступ от правого края */
+  bottom: 1rem; /* Отступ от нижнего края */
+  border-radius: 50%; /* Круглая форма */
+}
+
+/* Для больших экранов */
+@media (min-width: 1024px) {
+  img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .text-lg {
+    font-size: 1.25rem;
+  }
+}
 </style>

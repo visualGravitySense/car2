@@ -19,6 +19,8 @@
       <benefitsList :promotions="postsLoaded" />
 
     </div>
+
+    
   </div>
 </template>
 

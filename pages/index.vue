@@ -2,28 +2,33 @@
   <div class="home-page">
     <Hero/>
     <About/>
-    <Gift/>
+    <!-- <Gift/> -->
 
     <!-- Преимущества обучения -->
     <Benefits/>
      <!-- <Gallery/> -->
-    <br>
+    <!-- <br> -->
 
 
     <!-- Отзывы учеников -->
-    <section class="projects">
-    <h2 class="text-2xl font-semibold text-black">Отзывы</h2>
-    <div class="project transform transition hover:scale-105 hover:shadow-xl" v-for="project in projects" :key="project.title">
-      <div class="project-header">
-        <span>{{ project.date }}</span>
+    <section class="reviews-bg">
+      <div class="reviews-container">
+        <h2 class="reviews-title">Отзывы</h2>
+          <div class="review" v-for="project in projects" :key="project.title">
+            <div class="review-header">
+              <span>{{ project.date }}</span>
+            </div>
+            <div class="review-body">
+              <h3 class="review-title">{{ project.title }}</h3>
+              <p class="review-description">{{ project.description }}</p>
+              <AppButton class="review-button">Комментировать</AppButton>
+            </div>
+          </div>
       </div>
-      <div class="project-body">
-        <h3 class="text-2xl font-semibold text-black">{{ project.title }}</h3>
-        <p>{{ project.description }}</p>
-        <AppButton class="project transform transition hover:scale-105 hover:shadow-xl">Комментировать</AppButton>
-      </div>
-    </div>
-  </section>
+      
+    </section>
+
+
 
 
 
@@ -194,33 +199,141 @@ form button {
   cursor: pointer;
 }
 
-.projects {
-  background: #e1e1e1;
+.reviews {
+  background-color: #f5f5f5; /* более мягкий цвет фона */
   padding: 20px;
 }
-.project {
-  background: #fff;
-  border: 2px solid #000;
+
+.reviews-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
   margin-bottom: 20px;
-  padding: 20px;
-  box-shadow: 5px 5px 0 #000;
 }
-.project-header {
-  background: #fc3d93;
-  padding: 10px;
+
+.review {
+  background-color: #fff;
+  border: 1px solid #ddd; /* более мягкая граница */
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 5px; /* округление углов для мягкости */
+  transition: background-color 0.3s ease; /* простой эффект при наведении */
 }
-.project-body h3 {
-  margin: 0 0 10px;
+
+.review:hover {
+  background-color: #f0f0f0; /* легкий эффект изменения фона при наведении */
 }
-.project-body p {
-  margin: 0 0 10px;
+
+.review-header {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 10px;
 }
-.project-body button {
-  padding: 10px 20px;
-  background: #9dff00;
-  color: #141313;
+
+.review-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.review-description {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.review-button {
+  padding: 8px 16px;
+  background-color: #007bff; /* более нейтральный цвет кнопки */
+  color: #fff;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
+.review-button:hover {
+  background-color: #0056b3; /* темнее при наведении */
+}
+
+/* Контейнер для отзывов */
+
+.reviews-bg {
+  background-color: #f5f5f5; 
+}
+
+.reviews-container {
+  max-width: 800px; /* Максимальная ширина для отзывов */
+  margin: 0 auto; /* Центрируем контейнер на странице */
+  padding: 20px;
+  /* background-color: #f5f5f5; Фон всей секции */
+  border-radius: 8px; /* Округленные углы у контейнера */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень для контейнера */
+}
+
+/* Заголовок секции отзывов */
+.reviews-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center; /* Центрируем заголовок */
+}
+
+/* Карточка одного отзыва */
+.review {
+  background-color: #fff;
+  border: 1px solid #ddd; /* Тонкая граница */
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 5px; /* Округленные углы карточки */
+  transition: background-color 0.3s ease; /* Эффект изменения фона при наведении */
+}
+
+/* Эффект при наведении на карточку */
+.review:hover {
+  background-color: #f0f0f0; /* Легкое изменение фона */
+}
+
+/* Заголовок карточки */
+.review-header {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Текст заголовка отзыва */
+.review-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+/* Описание отзыва */
+.review-description {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* Кнопка в карточке */
+.review-button {
+  padding: 8px 16px;
+  background-color: #007bff; /* Основной цвет кнопки */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Эффект при наведении на кнопку */
+.review-button:hover {
+  background-color: #0056b3; /* Темный цвет кнопки при наведении */
+}
+
+
 
 </style>

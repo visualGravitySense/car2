@@ -101,115 +101,137 @@ export default {
 </script>
 
 <style scoped>
-/* Основные стили */
+
 .gift-card {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-}
-
-.gift-info, .gift-certificate {
+    display: flex;
+    gap: 20px; /* Расстояние между блоками */
+    padding: 20px;
+  }
+.gift-info {
+  
+  flex: 1; /* Чтобы блоки занимали равное пространство */
+  border: 1px solid #ddd; /* Лёгкая граница для визуального отделения */
+  padding: 20px; /* Внутренние отступы для блока */
+  border-radius: 8px; /* Закруглённые углы */
+  background-color: #f9f9f9; /* Лёгкий фоновый цвет */
   border: 1px solid #ddd;
   border-radius: 5px;
-  padding: 15px;
-  background-color: #fff;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  /* background-color: #f9f9f9; */
 }
-
-.text-description {
-  color: #333;
+  .gift-certificate {
+  
+  flex: 1; /* Чтобы блоки занимали равное пространство */
+  border: 1px solid #ddd; /* Лёгкая граница для визуального отделения */
+  padding: 20px; /* Внутренние отступы для блока */
+  border-radius: 8px; /* Закруглённые углы */
+  background-color: #f9f9f9; /* Лёгкий фоновый цвет */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #f9f9f9;
 }
-
 .certificate-heading {
-  font-size: 20px;
-  margin-bottom: 15px;
+  font-size: 24px;
+  margin-bottom: 20px;
   color: #333;
 }
-
-.custom-component {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.image-block i {
-  color: #4CAF50;
-}
-
-.text-block {
-  flex: 1;
-}
-
-.green-text {
-  color: #4CAF50;
-}
-
 .form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  margin-bottom: 0px;
+  
 }
-
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
 .form-input {
-  padding: 8px;
-  border: 1px solid #ddd;
+  width: 100%;
+  /* padding: 10px; */
+  /* border: 1px solid #ccc;
   border-radius: 5px;
+  background-color: #fff; */
+  font-size: 16px;
 }
-
 .submit-btn {
-  background-color: #4CAF50;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #11b445;
   color: #fff;
-  padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
-
 .submit-btn:hover {
-  background-color: #45a049;
+  background-color: #0e9e38;
 }
-
+.message {
+  margin-top: 20px;
+  /* color: #3182ce; */
+}
 .certificate {
-  max-width: 100%;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  max-width: 400px;
+  margin-top: 20px;
+  padding: 20px;
+  border: 2px solid #3182ce;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  font-family: 'Times New Roman', Times, serif;
+  position: relative;
+  background-image: url('@/assets/img/certificate_1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
 }
-
 .certificate-content {
-  margin-top: 10px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+  margin: 20px 0;
 }
-
-.certificate-amount, .certificate-code {
+.certificate-amount,
+.certificate-code {
+  font-size: 18px;
+  margin: 10px 0;
+}
+.certificate-name {
+  font-size: 16px;
+  margin: 10px 0;
+}
+.certificate-amount {
   font-weight: bold;
 }
-
 .certificate-code {
-  background-color: #f0f0f0;
-  padding: 5px;
+  background: #f9f9f9;
   border: 1px dashed #4CAF50;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
 }
-
-/* Медиазапросы для мобильных устройств */
-@media (max-width: 600px) {
-  .gift-card {
-    padding: 10px;
-  }
-  
-  .gift-info, .gift-certificate {
-    padding: 10px;
-  }
-
-  .custom-component {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .image-block i {
-    font-size: 24px;
-  }
+.custom-component {
+  display: flex; /* Размещаем блоки в ряд */
+  align-items: center; /* Выравниваем по вертикали по центру */
+  gap: 8px; /* Расстояние между блоками */
+  /*padding: 20px;  Добавляем отступы */
+}
+.image-block {
+  /* Дополнительные стили для блока с изображением (если необходимо) */
+}
+.text-block {
+  display: flex; /* Размещаем текстовые блоки в ряд */
+  flex-direction: row; /* Вертикальное расположение текстов */
+  gap: 3px; /* Расстояние между текстами */
+}
+.green-text {
+  color: #333; /* Устанавливаем зелёный цвет текста */
+}
+.orange-text {
+  color: #333; /* Устанавливаем оранжевый цвет текста */
 }
 </style>
